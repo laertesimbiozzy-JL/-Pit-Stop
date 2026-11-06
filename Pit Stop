@@ -1,0 +1,472 @@
+pit-stop-lanches/
+├── index.html
+├── style.css
+└── script.js
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pit Stop Lanches</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span>PIT STOP</span>
+        <small>LANCHES</small>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+</header>
+
+
+<main>
+
+    <!-- INÍCIO -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">🍔 SABOR DE VERDADE</span>
+
+            <h1>
+                O sabor que faz
+                <span>sua parada</span>
+                valer a pena!
+            </h1>
+
+            <p>
+                Hambúrgueres, hot dogs, shawarmas e bebidas
+                preparados para deixar seu dia mais gostoso.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#cardapio" class="btn principal">
+                    VER CARDÁPIO
+                </a>
+
+                <a href="#contato" class="btn secundario">
+                    FAÇA SEU PEDIDO
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-food">
+            🍔
+        </div>
+
+    </section>
+
+
+    <!-- CARDÁPIO -->
+
+    <section id="cardapio" class="cardapio">
+
+        <div class="section-title">
+
+            <span>🍴 NOSSO CARDÁPIO</span>
+
+            <h2>
+                Escolha seu
+                <strong>favorito!</strong>
+            </h2>
+
+            <p>
+                Produtos preparados com muito sabor.
+            </p>
+
+        </div>
+
+
+        <div class="produtos">
+
+
+            <!-- PRODUTO 1 -->
+
+            <article class="produto">
+
+                <div class="produto-img">
+                    🌭
+                </div>
+
+                <div class="produto-info">
+
+                    <h3>Hot Dog Simples</h3>
+
+                    <p>
+                        Pão macio, salsicha e molho especial.
+                    </p>
+
+                    <div class="produto-bottom">
+
+                        <strong>R$ 5,00</strong>
+
+                        <button onclick="adicionarPedido('Hot Dog Simples', 5)">
+                            + PEDIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 2 -->
+
+            <article class="produto destaque">
+
+                <span class="mais-vendido">
+                    MAIS VENDIDO
+                </span>
+
+                <div class="produto-img">
+                    🌭
+                </div>
+
+                <div class="produto-info">
+
+                    <h3>Hot Dog Completo</h3>
+
+                    <p>
+                        Salsicha, molho, batata palha e molhos especiais.
+                    </p>
+
+                    <div class="produto-bottom">
+
+                        <strong>R$ 8,00</strong>
+
+                        <button onclick="adicionarPedido('Hot Dog Completo', 8)">
+                            + PEDIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 3 -->
+
+            <article class="produto">
+
+                <div class="produto-img">
+                    🍔
+                </div>
+
+                <div class="produto-info">
+
+                    <h3>Pit Burger</h3>
+
+                    <p>
+                        Hambúrguer, queijo, salada e molho especial.
+                    </p>
+
+                    <div class="produto-bottom">
+
+                        <strong>R$ 12,99</strong>
+
+                        <button onclick="adicionarPedido('Pit Burger', 12.99)">
+                            + PEDIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 4 -->
+
+            <article class="produto">
+
+                <div class="produto-img">
+                    🥙
+                </div>
+
+                <div class="produto-info">
+
+                    <h3>Pit Árabe</h3>
+
+                    <p>
+                        Pão árabe, carne, queijo, salada e molhos.
+                    </p>
+
+                    <div class="produto-bottom">
+
+                        <strong>R$ 19,99</strong>
+
+                        <button onclick="adicionarPedido('Pit Árabe', 19.99)">
+                            + PEDIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 5 -->
+
+            <article class="produto">
+
+                <div class="produto-img">
+                    🌯
+                </div>
+
+                <div class="produto-info">
+
+                    <h3>Pit Shawarma</h3>
+
+                    <p>
+                        Shawarma no pão árabe com molho especial.
+                    </p>
+
+                    <div class="produto-bottom">
+
+                        <strong>R$ 18,99</strong>
+
+                        <button onclick="adicionarPedido('Pit Shawarma', 18.99)">
+                            + PEDIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 6 -->
+
+            <article class="produto">
+
+                <div class="produto-img">
+                    🥤
+                </div>
+
+                <div class="produto-info">
+
+                    <h3>Suco 300 ml</h3>
+
+                    <p>
+                        Suco natural disponível em diversos sabores.
+                    </p>
+
+                    <div class="produto-bottom">
+
+                        <strong>R$ 7,00</strong>
+
+                        <button onclick="adicionarPedido('Suco 300 ml', 7)">
+                            + PEDIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="sobre" class="sobre">
+
+        <div class="sobre-img">
+            🍔
+        </div>
+
+        <div class="sobre-texto">
+
+            <span>🔥 SOBRE O PIT STOP</span>
+
+            <h2>
+                Uma parada rápida
+                para um sabor incrível.
+            </h2>
+
+            <p>
+                O Pit Stop Lanches nasceu para oferecer uma experiência
+                rápida, saborosa e acessível para quem não abre mão de
+                comer bem.
+            </p>
+
+            <p>
+                Nosso objetivo é transformar aquela pequena parada
+                do dia em um momento especial.
+            </p>
+
+            <div class="beneficios">
+
+                <div>
+                    <strong>🍔</strong>
+                    <span>Produtos saborosos</span>
+                </div>
+
+                <div>
+                    <strong>⚡</strong>
+                    <span>Atendimento rápido</span>
+                </div>
+
+                <div>
+                    <strong>💰</strong>
+                    <span>Preço acessível</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato" class="contato">
+
+        <div class="section-title">
+
+            <span>📲 FALE CONOSCO</span>
+
+            <h2>
+                Faça seu <strong>pedido</strong>
+            </h2>
+
+        </div>
+
+
+        <form id="pedidoForm">
+
+            <div class="form-group">
+
+                <label>Nome</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Telefone</label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="(85) 99999-9999"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Seu pedido</label>
+
+                <textarea
+                    id="mensagem"
+                    rows="5"
+                    placeholder="Digite seu pedido..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="btn principal enviar">
+                ENVIAR PEDIDO
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- CARRINHO -->
+
+<div id="carrinho" class="carrinho">
+
+    <div>
+
+        <span>🛒</span>
+
+        <div>
+            <strong id="quantidade">0 itens</strong>
+            <small>Total: R$ <span id="total">0,00</span></small>
+        </div>
+
+    </div>
+
+    <button onclick="finalizarPedido()">
+        FINALIZAR
+    </button>
+
+</div>
+
+
+<!-- RODAPÉ -->
+
+<footer>
+
+    <div class="footer-logo">
+        PIT STOP <span>LANCHES</span>
+    </div>
+
+    <p>
+        O sabor que faz sua parada valer a pena!
+    </p>
+
+    <div class="social">
+
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Facebook</a>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Pit Stop Lanches — Todos os direitos reservados.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
